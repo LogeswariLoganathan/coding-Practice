@@ -1,0 +1,41 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        
+        StringBuilder sb=new StringBuilder();
+        for(int i=0;i<s.length();i++){
+            char curr=Character.toLowerCase(s.charAt(i));
+            if(curr=='a'||curr=='e'||curr=='i'||curr=='o'||curr=='u'){
+                sb.append((curr-'a'+1));
+            }
+            else{
+            sb.append(s.charAt(i));
+            }
+        }
+        System.out.println(sb.toString());
+    }
+}
+/*
+Example 1:
+Input:  Hello
+Output: H5ll15
+
+Example 2:
+Input:  UC Browser
+Output: 21C Br15ws5r
+
+Example 3:
+Input:  aeiou AEIOU
+Output: 1591521 1591521
+
+Example 4:
+Input:  Rhythm FLY
+Output: Rhythm FLY
+
+Example 5:
+Input:  Java 101!
+Output: J1v1 101!
+*/
